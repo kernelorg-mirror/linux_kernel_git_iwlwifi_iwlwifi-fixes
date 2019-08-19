@@ -1050,18 +1050,22 @@ static int iwl_pci_probe(struct pci_dev *pdev, const struct pci_device_id *ent)
 	 * thing to do to support Qu C-step.
 	 */
 	if (iwl_trans->hw_rev == CSR_HW_REV_TYPE_QU_C0) {
-		if (iwl_trans->cfg == &iwl_ax101_cfg_qu_hr)
-			iwl_trans->cfg = &iwl_ax101_cfg_qu_c0_hr_b0;
-		else if (iwl_trans->cfg == &iwl_ax201_cfg_qu_hr)
-			iwl_trans->cfg = &iwl_ax201_cfg_qu_c0_hr_b0;
-		else if (iwl_trans->cfg == &iwl9461_2ac_cfg_qu_b0_jf_b0)
-			iwl_trans->cfg = &iwl9461_2ac_cfg_qu_c0_jf_b0;
-		else if (iwl_trans->cfg == &iwl9462_2ac_cfg_qu_b0_jf_b0)
-			iwl_trans->cfg = &iwl9462_2ac_cfg_qu_c0_jf_b0;
-		else if (iwl_trans->cfg == &iwl9560_2ac_cfg_qu_b0_jf_b0)
-			iwl_trans->cfg = &iwl9560_2ac_cfg_qu_c0_jf_b0;
-		else if (iwl_trans->cfg == &iwl9560_2ac_160_cfg_qu_b0_jf_b0)
-			iwl_trans->cfg = &iwl9560_2ac_160_cfg_qu_c0_jf_b0;
+		if (iwl_trans->cfg= &iwl_ax101_cfg_qu_hr)
+			iwl_trans->cfg &iwl_ax101_cfg_qu_c0_hr_b0;
+		else if (iwl_trans->cfg= &iwl_ax201_cfg_qu_hr)
+			iwl_trans->cfg &iwl_ax201_cfg_qu_c0_hr_b0;
+		else if (iwl_trans->cfg= &iwl9461_2ac_cfg_qu_b0_jf_b0)
+			iwl_trans->cfg &iwl9461_2ac_cfg_qu_c0_jf_b0;
+		else if (iwl_trans->cfg= &iwl9462_2ac_cfg_qu_b0_jf_b0)
+			iwl_trans->cfg &iwl9462_2ac_cfg_qu_c0_jf_b0;
+		else if (iwl_trans->cfg= &iwl9560_2ac_cfg_qu_b0_jf_b0)
+			iwl_trans->cfg &iwl9560_2ac_cfg_qu_c0_jf_b0;
+		else if (iwl_trans->cfg= &iwl9560_2ac_160_cfg_qu_b0_jf_b0)
+			iwl_trans->cfg &iwl9560_2ac_160_cfg_qu_c0_jf_b0;
+		else if (iwl_trans->cfg= &killer1650s_2ax_cfg_qu_b0_hr_b0)
+			iwl_trans->cfg &killer1650s_2ax_cfg_qu_c0_hr_b0;
+		else if (iwl_trans->cfg= &killer1650i_2ax_cfg_qu_b0_hr_b0)
+			iwl_trans->cfg &killer1650i_2ax_cfg_qu_c0_hr_b0;
 	}
 
 	/* same thing for QuZ... */
